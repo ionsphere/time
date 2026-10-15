@@ -8,6 +8,7 @@ The game's first test is not a bridge or a top-line “time freed” score: **ca
 
 ## Start here
 
+- [Productivity Incentives](docs/PRODUCTIVITY_INCENTIVES.md) — why pure hourly credits can punish efficient workers, and what non-market alternatives actually reward.
 - [Everyday-Life Economy](docs/HOUSEHOLD_ECONOMY.md) — fish purchase from fisherman to household, jobs, businesses, producer risk, family care, credit issuance and repayment, housing, retirement, AI automation and difficult scarcity cases.
 - [First Playable](docs/VERTICAL_SLICE.md) — a month in a modern neighborhood of autonomous households, with verifiable acceptance tests.
 - [Game Design](docs/GAME_DESIGN.md) — player experience, wider campaign, infrastructure dilemmas, invention, art, and society laboratory.
