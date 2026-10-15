@@ -64,7 +64,7 @@ If the lake is exhausted, the inventory cannot be refilled. If 20 households wan
 
 **M3 — UI and narrative:** daily life, purchases, receipts, transaction tracing, household dashboard and agent decision explanations.
 
-**M4 — automation and research:** productivity improvements, jobs lost/new tasks, training, finite invention rewards and scientific uncertainty.
+**M4 — automation and research:** add **The Better Fisher** incentive dilemma: if labor per ten fish falls from 60 to six minutes, does a fisher adopt the method when hourly pay drops? Compare accepted-output obligations, stable essential access, finite funded innovation dividends, and intrinsic motivations. Also test jobs lost/new tasks, training and scientific uncertainty. See [Productivity Incentives](PRODUCTIVITY_INCENTIVES.md).
 
 **M5 — economic laboratory:** compare time cost, conventional money/interest and hybrid rule sets in matching worlds.
 
