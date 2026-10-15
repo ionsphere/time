@@ -5,6 +5,10 @@
 
 This document supersedes the earlier bridge-first *scope*, not the provenance/credit principles in [ECONOMIC_MODEL.md](ECONOMIC_MODEL.md). Assume that time provenance, reference production effort, quality checks, and settlement accounting can be calculated correctly. The simulation is designed to discover **what people do once this accounting exists**.
 
+## Productivity incentive contradiction
+
+**Earning credits for actual work and lowering production costs through efficiency can conflict.** A fisherman who fills an accepted 10-fish order in six minutes instead of 60 may get one-tenth the income under strict elapsed-time pay, even as consumers pay less for fish. A system dependent only on worked minutes can therefore penalize progress. The simulation **must not assume that a standard minute of cost equals a minute of personal entitlement**. Compare accepted-output commitments, baseline access, finite funded productivity dividends, and intrinsic motivations without changing the immutable physical time unit. See [Productivity Incentives](PRODUCTIVITY_INCENTIVES.md).
+
 ## A. Three non-interchangeable quantities
 
 1. **Elapsed human hours:** 24 hours each day per person; travel, work, care, sleep, leisure.
