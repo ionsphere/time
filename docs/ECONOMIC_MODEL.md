@@ -1,5 +1,5 @@
 # TIME — Economic Simulation Specification
-## Verifiable model · v0.1
+## Verifiable model · v0.2
 
 This document defines **game rules, not a claim that labor time is a discovered physical price of all things**. Explicitly separate what is measurable, what is conventional policy, and what remains a difficult economic allocation question. A simulation should expose these seams rather than suppress them.
 
@@ -195,3 +195,33 @@ Example: 10→1 labor-hours/task across 100,000 equivalent uses = 900,000 gross 
 - One infinitely redeemable “hour token”; future access requires future production and functioning institutions.
 
 These questions are the **game**, not flaws to paper over. See [Game Design](GAME_DESIGN.md) and [Vertical Slice](VERTICAL_SLICE.md).
+
+## 11. Everyday-life closed economy (v0.2 addendum)
+
+The foundational simulation is **not a city-building metric generator**. It is an economy of households that earn credits through accepted output and use credits to purchase specific goods and services produced by other people. The full lifecycle and example transactions are specified in [Household Economy](HOUSEHOLD_ECONOMY.md); the revised first playable is in [Vertical Slice](VERTICAL_SLICE.md).
+
+### Illustrative fishing exchange
+
+One fisher: 60 accepted standard minutes catching ten verified fish; 30 standard minutes of attributable boat/tools/transport time in the batch; 90 reference minutes total; 9 TC per fish. A household with +120 TC buys two fish for 18 TC and is left with +102; the seller receives the 18. Across ten fish sold, the fishing operation grosses 90 TC, covering 30 TC previously paid/owed upstream and 60 TC direct fishing labor. Inventory and credit transfers are **separate conserved flows**. A producer co-op can advance earnings on permitted working capital while accepting unsold inventory risk. Each original upstream cost is recovered once, not minted when every fish changes hands.
+
+There is **no required wage or sale solely for time spent**. No willing buyer -> no automatic income; household bills and opportunity costs nevertheless persist. Fish supply is physically constrained and may require reservation, quota or queue allocation at posted reference cost.
+
+### What a person does with the money
+
+People purchase food, shelter, repair, transport, childcare, healthcare, cultural experiences and education. Their recurring needs and preferences drive producers' future output and job offerings. A successful productivity improvement reduces the human effort required by equivalent future goods but may also eliminate some remunerated tasks, creating an access/credit problem. **Do not assume that lower costs automatically guarantee higher household wellbeing.**
+
+### Household life must be endogenously sustained
+
+Simulate household pooling, pregnancy/children, care, schooling, training, illness/disability, old age, housing construction/maintenance and the varying ability to earn accepted TC. Public support and credit extension are explicit resource/obligation transfers rather than magical unrestricted grants; test different care and universal essential-access policies. A family should be able to fail financially even when the ledger balances mathematically.
+
+### Special cases to test, not hide
+
+When demand exceeds fixed-cost supply, prices remain reference-based in the baseline and goods are allocated through an explicit policy rather than an unexplained price hike. Scarce skills and finite natural resources impose real constraints despite low embodied labor. A housing loan may charge no interest but still require resource commitments and expose society to default. Unused work and unsold products are waste, not compulsory debts imposed on prospective buyers.
+
+### Hard tests for the full simulator
+
+- Every purchased good exists as inventory and enters exactly one recipient; consumed goods cannot be purchased twice.
+- Every credit received has an equal outgoing transfer or matching permitted liability; no clock-time or avoided-time minting.
+- Contributions must be requested/accepted or be funded by an explicitly authorized institution; quality failure and lack of demand cause real producer losses.
+- A dependency-heavy household and an unemployed household must face explicit support and affordability constraints.
+- A family can voluntarily change work hours, production, consumption and savings after automation; the aggregate simulation should not predetermine whether free time or unemployment dominates.
