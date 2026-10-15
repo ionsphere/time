@@ -1,5 +1,5 @@
 # TIME — Economic Simulation Specification
-## Verifiable model · v0.1
+## Verifiable model · v0.4
 
 This document defines **game rules, not a claim that labor time is a discovered physical price of all things**. Explicitly separate what is measurable, what is conventional policy, and what remains a difficult economic allocation question. A simulation should expose these seams rather than suppress them.
 
@@ -118,14 +118,14 @@ The baseline and trip basket are explicit. New clinics, relocated employers, con
 
 ## 6. Credits and interest-free clearing
 
-A time credit is a **transferable accounting claim**, not a certificate that time has been stored.
+A time credit is a **transferable accounting claim**, not a certificate that time has been stored. A producer and buyer can voluntarily accept an exchange, but **cannot negotiate the certified reference cost of the output**. See [Foundational Cost](FOUNDATIONAL_COST.md) for the decisive separation of measurement, settlement, incentive, and access rights.
 
 - Issue/extend balances only when an accepted output/service is supplied to a consenting recipient, or a transparently approved civic obligation funds it.
 - Every posting is double-entry: `Σ balances = 0` across the closed simulation (including institutional accounts and credit liabilities).
 - Positive account positions have counterparties with obligations. Enforce credit limits, repayment schedules, default resolution, consent, fraud/quality controls.
 - **No automatic balance appreciation, interest, or yield.** A 100 TC principal obligation is 100 TC principal; actual real purchasing possibilities may still change as technology and scarcity change.
 - Civic projects can pay workers through a funded commons account or an approved credit line; beneficiaries can later contribute and retire obligations.
-- A contribution becomes payable because someone has agreed to accept the output, **not because the producer consumed an impressive number of hours**.
+- A contribution is eligible for settlement only when actual verified output/service is accepted (or a funded civic production obligation is completed); **acceptance is not agreement on a discretionary price**. The amount is the mechanically computed reference effort of the quality-equivalent deliverable, and a producer is not automatically owed payment for wasted work.
 - Public services and universal entitlements require explicit collective funding/contribution rules. An unfunded public debit is a liability, not free money.
 
 This can become insolvent. Simulate bad loans, departure, inability to repay, and the governance consequences of debt relief or shared loss. An immutable unit **does not** solve solvency.
@@ -195,3 +195,41 @@ Example: 10→1 labor-hours/task across 100,000 equivalent uses = 900,000 gross 
 - One infinitely redeemable “hour token”; future access requires future production and functioning institutions.
 
 These questions are the **game**, not flaws to paper over. See [Game Design](GAME_DESIGN.md) and [Vertical Slice](VERTICAL_SLICE.md).
+
+## 11. Everyday-life closed economy (v0.2 addendum)
+
+The foundational simulation is **not a city-building metric generator**. It is an economy of households that earn credits through accepted output and use credits to purchase specific goods and services produced by other people. The full lifecycle and example transactions are specified in [Household Economy](HOUSEHOLD_ECONOMY.md); the revised first playable is in [Vertical Slice](VERTICAL_SLICE.md).
+
+### Illustrative fishing exchange
+
+One fisher: 60 accepted standard minutes catching ten verified fish; 30 standard minutes of attributable boat/tools/transport time in the batch; 90 reference minutes total; 9 TC per fish. A household with +120 TC buys two fish for 18 TC and is left with +102; the seller receives the 18. Across ten fish sold, the fishing operation grosses 90 TC, covering 30 TC previously paid/owed upstream and 60 TC direct fishing labor. Inventory and credit transfers are **separate conserved flows**. A producer co-op can advance earnings on permitted working capital while accepting unsold inventory risk. Each original upstream cost is recovered once, not minted when every fish changes hands.
+
+There is **no required wage or sale solely for time spent**. No willing buyer -> no automatic income; household bills and opportunity costs nevertheless persist. Fish supply is physically constrained and may require reservation, quota or queue allocation at posted reference cost.
+
+### What a person does with the money
+
+People purchase food, shelter, repair, transport, childcare, healthcare, cultural experiences and education. Their recurring needs and preferences drive producers' future output and job offerings. A successful productivity improvement reduces the human effort required by equivalent future goods but may also eliminate some remunerated tasks, creating an access/credit problem. **Do not assume that lower costs automatically guarantee higher household wellbeing.**
+
+### Household life must be endogenously sustained
+
+Simulate household pooling, pregnancy/children, care, schooling, training, illness/disability, old age, housing construction/maintenance and the varying ability to earn accepted TC. Public support and credit extension are explicit resource/obligation transfers rather than magical unrestricted grants; test different care and universal essential-access policies. A family should be able to fail financially even when the ledger balances mathematically.
+
+### Special cases to test, not hide
+
+When demand exceeds fixed-cost supply, prices remain reference-based in the baseline and goods are allocated through an explicit policy rather than an unexplained price hike. Scarce skills and finite natural resources impose real constraints despite low embodied labor. A housing loan may charge no interest but still require resource commitments and expose society to default. Unused work and unsold products are waste, not compulsory debts imposed on prospective buyers.
+
+### Hard tests for the full simulator
+
+- Every purchased good exists as inventory and enters exactly one recipient; consumed goods cannot be purchased twice.
+- Every credit received has an equal outgoing transfer or matching permitted liability; no clock-time or avoided-time minting.
+- Contributions must be requested/accepted or be funded by an explicitly authorized institution; quality failure and lack of demand cause real producer losses.
+- A dependency-heavy household and an unemployed household must face explicit support and affordability constraints.
+- A family can voluntarily change work hours, production, consumption and savings after automation; the aggregate simulation should not predetermine whether free time or unemployment dominates.
+
+## 12. No-bargaining clarification (v0.4)
+
+**The words “agreed compensation” must not determine the price of a fish, labor service, or manufactured good.** Given a verifiable output specification, an accessible production method, its inputs and a published cost-allocation algorithm, the reference transaction cost is computed—never negotiated. Choice to buy or sell is separate from the clock-based measuring standard. An agent can decline an offer, but cannot raise the reference cost by declaring extra willingness to pay or refusing to accept less.
+
+A fish batch produced in 60 human minutes containing ten acceptable fish has six direct minutes per fish; a batch of 100 at the same direct time has 0.6 minute per fish. Upstream allocations extend those numbers. Historical batch cost is not the same thing as a currently reproducible *reference* cost; relying only on actual elapsed labor rewards slowness. A physically constrained optimized recipe governs the exchange standard. Scarcity still requires explicit allocation.
+
+**Accounting impossibility:** if an improved method makes ten fish for six credits and consumers transfer six, the fisher cannot receive the old 60 credits unless someone else is debited or a real obligation is created. Make these counterparties visible rather than using agreed output compensation as a covert non-cost price.

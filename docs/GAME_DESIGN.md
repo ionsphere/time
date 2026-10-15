@@ -1,15 +1,18 @@
 # TIME — The Hours We Give Back
-## Game design document · v0.1
+## Game design document · v0.2
 
 > **Pitch:** Build a living society whose success is measured by how much of life people reclaim. Every farm, house, road, artwork, machine, and invention has a traceable history of human effort. A non-speculative time-credit economy tracks accepted contributions; progress makes necessities cheaper rather than making money more expensive.
 
-**Genre:** approachable isometric city builder + agent-based economic simulation + narrative thought experiment.  
+
+> **Core direction update (v0.2): everyday exchange first.** The earlier city-building proposal is now a secondary layer. The first playable is a **modern household and autonomous-agent economy**: people earn accepted time credits, buy other people's fish and services, decide whether and what to produce, maintain homes, raise children, receive care, and react to technological progress. Infrastructure projects, including the bridge, are later consequences of that economy. The primary test is whether a person can live a complete life with these rules. See [Household Economy](HOUSEHOLD_ECONOMY.md) and [First Playable](VERTICAL_SLICE.md).
+
+**Genre:** household life simulator + autonomous-agent economic simulation + civic-planning sandbox.  
 **Audience:** players who enjoy city builders, production-chain puzzles, and systemic sandboxes; no economics background required.  
-**Player fantasy:** not “become the richest mayor,” but “give a community its life back.”  
+**Player fantasy:** live a real life and participate in a functioning alternative economy; optionally help a community reclaim its time.  
 **Working title:** TIME: The Hours We Give Back.  
 **Status:** game design, not an implemented prototype. Assumptions are deliberately falsifiable.
 
-## The hook: the first bridge
+## Later infrastructure example: the first bridge
 
 A river separates 80 villagers from their fields. Each day, they take a long detour. The player can direct available productive effort to constructing a bridge, but doing so delays food storage and tool repairs.
 
@@ -54,11 +57,11 @@ A persistent **Time Pulse** strip shows: population, average required work/day, 
 
 ## The player role
 
-The player is a **steward of the commons**, not the owner of everyone's labor. They can propose infrastructure, set transparent civic rules, fund research, plan roads and services, allocate limited shared supplies, and compare designs. Citizens have autonomy: they choose activities, accept or decline offered work, and can oppose or leave unfair arrangements. Story-mode town councils approve major interventions; sandbox mode can override consent for stress tests, with consequences shown.
+The default player follows **one household** and directly chooses its work, shopping, care, housing, relationships, savings, study and creative activities. All other citizens make their own decisions. No one controls everyone else's labor. An optional **Society Lens** allows civic policy proposals, public projects and matched-seed experiments. Decisions such as building a bridge, funding research or changing credit rules emerge from the ordinary household economy.
 
-This creates real gameplay: a project may have outstanding global time savings but benefit only one district or burden a small set of specialists.
+This creates real gameplay: a household can have enough time but not enough accepted credit, or plenty of credits but no access to a scarce specialist or desirable land. A civic project may have spectacular total time savings but distribute its benefits unequally.
 
-## Core loop (each turn = one day; animated at accelerated real time)
+## Secondary civic-building loop (each turn = one day; animated at accelerated real time)
 
 1. **Observe** individual time diaries, unmet needs, queue lengths, physical inventory, and accessible services.
 2. **Find friction**: repetitive manual tasks, transport detours, tool downtime, skill bottlenecks, housing maintenance, information gaps.
@@ -70,9 +73,9 @@ This creates real gameplay: a project may have outstanding global time savings b
 
 Surprise is essential: a new road may induce more trips, a shorter commute may increase social visits, a robot may shift labor to technicians, and a theater may attract visitors but increase congestion. The underlying arithmetic is transparent even when outcomes are emergent.
 
-## Campaign structure: five acts
+## Longer-term chapters: five acts
 
-### Act I — The Detour (tutorial, ~20–30 minutes)
+### Act I — The Detour (optional infrastructure chapter)
 Build the bridge, maintain food supply, discover embodied hours vs hours saved, and open the Time Atlas. The player also learns why 25 hours saved daily is *not* 25 newly created credits.
 
 ### Act II — The Box and the Land
@@ -117,7 +120,7 @@ A spectacular productivity number that hides an exhausted minority or failing cl
 
 ## Two modes
 
-**Campaign** introduces the concepts as stories in a small coherent town. Players use the time economy from the outset and see why its rules exist.
+**Everyday-Life Campaign** introduces the economy through a household buying food, earning credits, caring for dependents and choosing housing; infrastructure episodes follow once exchange works. Players see why the rules exist through lived consequences.
 
 **Economic Laboratory** uses the **same world, agents, resources, preferences, and random seed** to compare rulesets: time-based contribution clearing, a conventional price/interest economy (stylized, not a straw man), and optional hybrids. The game can show when a conventional market allocates a scarce resource better, when a fixed cost benchmark causes a queue, or when a time-credit scheme cannot handle a rare specialist. Every comparison must disclose policy and modeling assumptions.
 

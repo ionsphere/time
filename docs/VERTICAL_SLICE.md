@@ -1,163 +1,86 @@
-# TIME — Vertical Slice & Prototype Plan
-## Build the first twenty minutes, not the entire world
+# TIME — First Playable: A Month in a Modern Neighborhood
+## Vertical slice v0.2 — everyday exchange first, infrastructure later
 
-This is a **proposal**, not an implementation. The first version should test whether **watching people reclaim their own time feels like winning**. It should also reveal at least one weakness of the time economy without punishing the player for discovering it.
+**This supersedes the bridge-centered first playable.** The bridge remains an optional demonstration, but the game must first simulate households who earn, shop, cook, care for children, maintain housing, and face uncertainty. The accounting and settlement mechanics are described in [Household Economy](HOUSEHOLD_ECONOMY.md), [Foundational Cost](FOUNDATIONAL_COST.md) and [Economic Model](ECONOMIC_MODEL.md).
 
-## One-sentence first-play promise
+> I work, buy fish another person caught, cook a meal, pay for care, save for housing, and choose how I respond when software automation changes available work. Every person and every time-credit transfer has an explainable origin.
 
-*“I built a bridge that never earns a coin, and it still feels like the most valuable thing I've ever constructed in a city builder.”*
+**Setting:** modern neighborhood, with automatic verified accounting. Approximately **60 households, 160 citizens**, in varying life stages, with a deterministic simulated month plus long-horizon acceleration and years-long event snapshots.
 
-## First playable: the river settlement
+## Required simulated economy
 
-**Map:** one small isometric valley with two neighborhoods, a river, fields, forest, workshop, storehouse, one bridge site, footpaths, and a commons square. Prefer a fixed hand-authored map with a seeded simulation over procedural world generation.
+- Food: fishing co-op, upstream boat/tool suppliers, farm, grocery store and optional food preparation.
+- Housing: home construction, repair, land/site-use allocation and interest-free principal obligations.
+- Services: utilities and transport, care/school, clinic, software and repair work.
+- Finance and commons: time-credit ledger, producer working-capital, household credit limits, public care support, defaults and assessments.
+- People: employed and unemployed adults, children, a single parent, caregiver, retirees, ill people, and specialists.
+- Choices: accept work, create products on anticipated demand, buy goods, seek services, share care, invest in skills, have children, save, move, borrow and refuse unwanted work.
 
-**Population:** 80 individually scheduled residents across households; 50 take a relevant daily one-way route in the introductory scenario. Their needs and choices vary. Keep visuals abstract enough to simulate accurately before high-detail animation.
+Producers own actual inventory. Customers cannot buy fish not caught; producers do not get paid simply for spending time when nobody accepts what they made. Fixed production-cost pricing can lead to shortages/queues, unsold inventory, or changed production volumes.
 
-**Production chains:**
-- food: farming -> harvest -> household consumption
-- timber/tool supply: gather timber -> workshop fabrication -> construction/repair
-- civic infrastructure: materials + construction labor -> footbridge -> upkeep and route savings
+## First-play session (25–35 minutes)
 
-**Core choices:**
-- maintain food supply now vs commit labor and timber to the bridge
-- shorten the route via a bridge vs improve the existing road (different costs/benefits)
-- spend discretionary hours on additional output vs leisure/care after the bridge opens
-
-**Not required for the first playable:** multiplayer, generalized AI citizens using LLMs, a world economy, currencies backed by physical assets, markets, all career types, political simulation, procedural research, 3D terrain, museums, or advanced research projects. Architecture should leave space for them, not implement them prematurely.
-
-## Exact 15–25-minute player journey
-
-| Minute | Player experience | System demonstrated |
+| Moment | Experience | System verified |
 | --- | --- | --- |
-| 0–2 | Intro flyover follows one resident making an absurd river detour; Time Pulse shows life devoted to travel and work. | Human diary / routing |
-| 2–5 | Click a resident; inspect 24-hour diary and “why they travel.” Preview travel-time isochrones. | Human-centered affordance |
-| 5–8 | Hover bridge: 300 standard-work-hours embodied estimate; predicted 25 person-hours saved per day; materials and upkeep required. Compare a cheaper road upgrade. | Cost vs time returned |
-| 8–12 | Commit to bridge; workshop/farm bottlenecks become obvious. Reassign only *available willing* workers, procure timber, defer non-critical work. | Scarce productive capacity |
-| 12–15 | Bridge opens; residents change routes; Time Pulse shows less travel. Credits do **not** jump. | Realized benefit, not currency mint |
-| 15–20 | Advance 12+ days; compare simple payback with the actual impact after maintenance/changed travel behavior. | Honest counterfactual |
-| 20–25 | A citizen chooses leisure instead of extra work; another helps on the farm. Compare town health/food/time results. | Productivity is not automatically leisure |
+| Meet household | Two adults and a child, current time diaries, skills, balances, health, house, food and care needs | Households create demand |
+| Work | Accept a software/repair task and earn time credits when accepted | Productive work is compensated |
+| Buy fish | Two fish cost 18 credits when the verified batch has 90 credited minutes for 10 fish | Goods and credits transfer |
+| Follow the fish | See fisherman, lake, tools, upstream maintenance, co-op inventory and payment chain | Provenance + payment are auditable |
+| Eat | Household consumes fish, health/food inventory changes; supplier updates next-day catch | Consumption shapes production |
+| Care | Choose daycare versus household caregiving; observe consequences for earnings and time | Care cannot disappear |
+| Housing | Pay repairs or principal; preview a different home and scarce-site allocation | Family planning and obligations |
+| Automate | Apply verified process change; prices for newly produced equivalent work fall, accepted job availability may change | Progress can benefit and displace |
+| Branch policy | Compare food-queue policies, credit default rules, public care support | Institutional choices matter |
+| Time travel | Advance to month 12, year 5, year 20 and inspect child, parent and retiree outcomes | Families must remain viable |
 
-This sequence should work before broader campaign chapters exist.
+The player guides one household, can inspect or switch to other citizens, and can run counterfactual civic-policy experiments. The town remains autonomous; no player compels everyone to work.
 
-## Presentation: three must-have interactions
+## Fish receipt and settlement
 
-### A. Click any person
+**Batch:** 60 accepted fishing minutes + 30 upstream allocated minutes -> 10 fish = 90 credited minutes. Two fish cost **18 TC**. **When this method is the verified feasible reference**, a household with +120 TC spends 18 and ends at +102. The seller receives the 18, and physically delivers two fish. Across full batch sales the fisher receives 90 gross, covers 30 of previously purchased or owed upstream inputs, and retains 60 for the direct fishing contribution.
 
-**Diary:** 24-hour radial or stacked timeline with sleep, care, work, travel, free-choice activities, and unmet commitments. Hover a segment to reveal the location, route, contributing task, and consequences.
+A co-op may pay the fisher before all fish sell using a permitted working-capital debit, then bear inventory/spoilage losses. Self-employed fishers may be paid when their catch sells. **No additional credits are created by recording embodied time or by a fish swimming into a net.** Closed-world ledger entries reconcile.
 
-**After the bridge:** show a same-person “before/after” diary and where the saved minutes actually went. If extra labor or new trips consumed the savings, say so.
+If the lake is exhausted, the inventory cannot be refilled. If 20 households want 10 available fish, a visible ration/lottery/priority/queue policy determines access, and agents seek substitutes or new suppliers. The posted reference time cost does not automatically rise with demand.
 
-### B. Click any product or building
+## Primary interface
 
-**Time Receipt:**
+1. **Living Neighborhood:** contemporary map, homes, workplaces, shopping, deliveries, school, clinic and citizen routines.
+2. **Person/Household Diary:** 24-hour activities, real work/care/travel/leisure, income, consumption, food inventory, monthly budget, loan principal and health.
+3. **Time Receipt:** verified production provenance, historic effort vs reference production cost, physical stock and quality.
+4. **Who Paid Whom:** follow exact time-credit postings from the buyer to sellers, salaries, upstream providers, taxes/assessments and principal-only repayments.
+5. **Society Lens:** distributions of food access, care, housing, work, shortages, credits, insolvency and quality of life, including children and elderly.
+6. **What-If Timeline:** identical seed and inputs under alternate policies or technologies.
 
-```
-Bridge #1 — verified historical inputs
-Labor on site                    120 standard h
-Timber and tools (allocated)    180 standard h
-----------------------------------------------
-Historical creation receipt     300 standard h
+## Engine and initial milestones
 
-Predicted avoided travel         25 person-h/day
-Expected upkeep                   1 standard h/day
-Simple gross payback             12 days
-No new time credits are issued by opening it.
-```
+**Architecture:** headless, deterministic agent-based simulator; event-sourced ledger; physical inventory and production graph; bounded-rational agent policies; household/lifecycle dynamics; thin visual renderer; seeded replay and measurable counterfactuals.
 
-The illustrative receipt must match the selected seeded scenario (or show actual computed values when the user changes the plan). Distinguish `person-h` of travel, `standard h` of compensated production, and `TC` of account credits even if the numbers align in a trivial example.
+**M0 — fish exchange:** two households, fish co-op, upstream input provider, accepted work, stocks, spoilage, settlement, authorized working capital, double entry.
 
-### C. Open the town's time atlas
+**M1 — everyday economy:** dozens of households and food, housing, care, health, infrastructure and service sectors, autonomous producer and consumer decisions.
 
-Overlay footpaths with resident traffic, reachable areas by walking time, commute bottlenecks, and daily minutes per household. Let users scrub “before / after” with no camera movement.
+**M2 — life stages:** childhood, education, family formation, caregiving, illness, retirement, housing loans, support policies and default.
 
-An optional “what changed?” compare panel shows labor, travel, free time, quality/access, physical resources, and net account positions **with the same seed**.
+**M3 — UI and narrative:** daily life, purchases, receipts, transaction tracing, household dashboard and agent decision explanations.
 
-## Minimal simulation architecture
+**M4 — automation and research:** add **The Better Fisher** incentive dilemma: if labor per ten fish falls from 60 to six minutes, does a fisher adopt the method when hourly pay drops? Compare accepted-output obligations, stable essential access, finite funded innovation dividends, and intrinsic motivations. Also test jobs lost/new tasks, training and scientific uncertainty. See [Productivity Incentives](PRODUCTIVITY_INCENTIVES.md).
 
-**Recommended path:** browser-playable TypeScript prototype with a deterministic headless domain simulation, thin renderer (e.g., Canvas/PixiJS), and UI view-model adapters. The economy cannot depend on animation timing. Avoid storing game state in UI components.
+**M5 — economic laboratory:** compare time cost, conventional money/interest and hybrid rule sets in matching worlds.
 
-```
-/core
-  clock, deterministic rng, event log, scenario loader
-  agents, households, diaries, needs, skills
-  world map, tile graph, pathfinding
-  inventories, production recipes, equipment and wear
-  provenance graph, reference recipe catalog
-  accepted work, double-entry ledger and civic budget
-  counterfactual evaluator, metric aggregation
-/game
-  steward commands, constraints, action previews, tutorial objectives
-/ui
-  town map, resident diary, time receipt, atlas, time pulse
-/scenarios
-  tutorial-river.json
-/tests
-  determinism, conservation, bridge, credit, recipe, diary, accessibility
-```
+**M6 — city infrastructure / art:** bridges, land accessibility, museums, public projects; now embedded in a working economy.
 
-A scenario data file should define map, inventories, agents, schedules, technology, baselines, and expected outcomes; no hard-coded special behavior for the bridge. Placeholders are acceptable if data and rules are explicit.
+## Acceptance tests (before visual polish)
 
-**Update discipline:** fixed simulation ticks with a daily aggregation pass; deterministic route choice with stable tie-breaks, deterministic event order, auditable transaction posting, seeded stochastic deviations.
+1. Fish batch, inventory, accepted work and money trail reconcile exactly; two fish transfer and cost 18 TC in the example seed; no double-counting upstream efforts.
+2. No demand leads to unsold fish/spoilage; excessive demand leads to transparent queue/allocation, not hidden price escalation.
+3. Person-hours in a day never exceed 24; care, transport, work and leisure cannot overlap.
+4. Accepted work earns credits through actual transfers or bounded obligations; wasted time alone does not mint them.
+5. A household can buy food and services, service house principal, support dependents, save, and make discretionary decisions.
+6. Children, temporarily ill adults, single parents and retirees have realistically different support and access under chosen policies. Unmet needs are observable.
+7. All closed-world time-credit postings sum to zero; loan loss and public debt are explicit.
+8. Automation makes new equivalent outputs cheaper while leaving historical production certificates fixed; no balance increases just because time is saved.
+9. At least one specialist shortage, fish shortage, and household-credit default produces an uncomfortable policy trade-off.
+10. The same seed plus the same actions produces identical diaries, stocks, credit transfers and outcomes.
 
-**Save/replay:** initial scenario + seed + timestamped player commands should reproduce outcomes. Snapshots accelerate rewind but do not replace the event history.
-
-## MVP model decisions
-
-- The bridge reduces route lengths and changes **actual agent time diaries**. Do not directly increment “freedom” as a collectible.
-- No resource appears because a person works: production recipes consume physical inputs and actual labor capacity.
-- No one is forced to work; if insufficient participants volunteer, projects pause.
-- Historic allocated creation work may differ from efficient benchmark work; log both.
-- Time credits change on accepted work/service settlement, not from idle time or gross “hours saved.”
-- No claims of guaranteed resale value for historical certificates.
-- No interest: loans have principal and default risk; optional credit lines require a funding institution.
-- Needs must be physically satisfied: no fake abundance from positive ledger balance.
-- One person cannot simultaneously travel, work, or provide childcare.
-- An atlas highlight states its comparison baseline (e.g., same home/field and same residents without bridge).
-
-## Acceptance criteria
-
-1. A completely fresh user can identify what the bridge costs, what it saves, and why the savings are valuable **without opening the ledger**.
-2. For the seeded introduction: the pre-bridge routing measurement is consistent with 50 commuters × 30 minutes each = 25 person-hours/day one-way, **when the scenario actually satisfies these numbers**.
-3. Completing construction reduces observed travel time. A same-seed no-bridge counterfactual demonstrates the difference.
-4. Daily person diaries total 1,440 minutes, without overlaps; travel path lengths/time reconcile with world geometry.
-5. `Σ TC balances = 0` in the closed test world; no credits are generated by travel savings, non-consensual work, failed products, or unused projections.
-6. Food, timber, equipment use, and completed construction reconcile with physical inventory and event logs.
-7. A road-upgrade alternative has meaningfully different costs/benefits from the bridge; at least one plausible choice has a downside.
-8. Altering the scenario seed or policies changes outcomes while identical replays match byte-for-byte canonical event summaries.
-9. A player can inspect raw origin of every number on the bridge receipt and a resident's before/after diary.
-10. Automated tests intentionally demonstrate **one limitation** of labor-time valuation (e.g., two equally costly site parcels attract unequal applicants and require an allocation rule).
-
-## Milestones (scope gates, not promises of elapsed delivery time)
-
-**M0 — Headless economics.** Build and test deterministic diaries, routing, production recipes, physical stock conservation, provenance, and closed double-entry TC accounts.
-
-**M1 — Visible village.** Map, paths, animated agents, speed controls, needs and jobs, basic Time Pulse.
-
-**M2 — The bridge.** Project previews, proposal/approval, constrained construction, before/after, counterfactual replay.
-
-**M3 — Player comprehension.** Time Receipt, diary, Time Atlas, annotated tutorial, accessibility and playtesting.
-
-**M4 — One uncomfortable trade-off.** Road vs bridge or food vs build; no perfect dominant strategy.
-
-**M5 — Laboratory scaffold.** Deterministic scenario comparisons, policy toggles, metrics export. Only then prototype invention rewards, museums, land allocations, and AI.
-
-## Future candidate expansions (not MVP promises)
-
-- **The Box and the Land:** urban accessibility, property condition and depreciation, clinic location, congestion, equitable site allocation.
-- **Workshop and Invention:** research fund, training, failed experiments, discovery prizes, finite verified productivity royalties.
-- **Museum:** art production provenance vs events and services, capacity, delight without measurable labor savings.
-- **AI transition:** automation, maintenance and data costs, distribution of productivity gains, skill bottlenecks, political pressure over free time.
-- **Economic Laboratory:** same-world counterfactuals under conventional pricing/interest, time-based clearing, and hybrids; no rigged baselines.
-
-## Evaluation and stop/go tests
-
-Run blind first-time play sessions and ask:
-- What did you gain from the bridge? (Desired answer: citizens’ travel time and optional use of that time.)
-- Did the bridge issue new currency? (Desired answer: no.)
-- Is a painting necessarily worth its creation hours to a buyer? (Desired answer: no.)
-- If faster machinery eliminates human labor, what else might become scarce? (Expected: natural resources, sites, expertise, access, care, attention.)
-- What trade-off did you regret, and why?
-
-**Stop/go:** if players only watch gauges and cannot connect the economy to individual lived experiences, rework the presentation before adding deeper monetary mechanics. If every simulation “proves” the theory, add counterexamples before expanding.
-
-See [Game Design](GAME_DESIGN.md) and [Economic Model](ECONOMIC_MODEL.md).
+**Exit criterion:** select any piece of fish, person, or credit and trace where it came from, who produced it, who paid whom, who consumed it and what each person did next. Without everyday cross-household exchange, the game cannot evaluate the time economy.
