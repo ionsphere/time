@@ -1,7 +1,9 @@
 # TIME — Everyday-Life Economy and Agent Simulation
-## Design v0.2 · households and exchange are the core
+## Design v0.3 · households and exchange are the core
 
 > **Core premise:** Simulate an economically complete, modern small town populated by autonomous people who **earn transferable credits for accepted work and spend them on other people's goods and services**. Their choices change production, demand, household formation, caregiving, housing, research, and the future labor requirements of society. Recovered leisure is a consequence of these mechanisms—not an award granted by the game.
+
+**No bargaining defines the number of credits due for a fish.** Certified reference exchange cost is mechanically computed from feasible production recipes; accepting a purchase affects *whether* a transfer happens, not how many credits the fish is worth. The social decision to guarantee basic access is separately governed. See [Foundational Cost](FOUNDATIONAL_COST.md).
 
 This document supersedes the earlier bridge-first *scope*, not the provenance/credit principles in [ECONOMIC_MODEL.md](ECONOMIC_MODEL.md). Assume that time provenance, reference production effort, quality checks, and settlement accounting can be calculated correctly. The simulation is designed to discover **what people do once this accounting exists**.
 
@@ -28,11 +30,11 @@ A fisherman catches **10 fish in 60 minutes** of accepted labor, using 30 standa
 | Direct fishing contribution | 60 standard minutes |
 | Upstream allocated inputs and services | 30 standard minutes |
 | Total reference production cost of batch | 90 standard minutes |
-| Reference cost per fish | 9 time credits |
+| Reference cost per fish (if no faster feasible equivalent method exists) | 9 time credits |
 | Two fish purchased by a household | 18 time credits |
 
 **Transaction timing and ledger:**
-- Upstream providers previously supplied equipment and services for an agreed 30 TC batch allocation. The fisherman has paid them already or owes them 30 TC against sales.
+- Upstream providers previously supplied equipment and services with 30 certified allocated time-minutes for the batch. The fisherman has paid them already or owes them 30 TC against sales.
 - A household with +120 TC buys two fish for 18 TC: household position becomes +102 TC; the seller's position increases by 18 TC. Physical inventory transfers two fish.
 - Across all 10 fish sold at cost: the fisherman receives 90 TC gross, pays or has already paid 30 TC to upstream providers, and retains **60 TC for the 60 minutes of fishing contribution** (before shared institutional obligations).
 - **No time is created:** the credits move from purchasers to contributors. The full ledger includes all accounts and offsets.
@@ -104,7 +106,7 @@ Each producer has people, skills, physical inputs, equipment capacity, output qu
 2. Producers decide whether enough potential users justify effort and equipment commitment.
 3. Workers voluntarily accept scoped tasks; supply inputs move in physical inventories.
 4. Output passes quality/acceptance; time receipts assign direct and upstream contributions exactly once.
-5. Goods are offered at **certified reference production cost** under baseline policy, not at the maximum willingness to pay.
+5. Goods are offered at **algorithmically certified reference production cost** under baseline policy, not at a wage, markup, maximum willingness to pay, or agreed compensatory price. Consumers choose whether to transact, not the unit cost.
 6. Consumers with sufficient balances/limits accept purchases; payment transfers TC and delivery moves stock.
 7. Providers recoup work, fund inputs, and decide whether to continue, expand, retrain, or abandon production.
 
