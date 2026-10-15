@@ -1,29 +1,31 @@
 # TIME — The Hours We Give Back
 
-**A game about building a world where progress gives people more of their lives back.**
+**A life and economic simulation of what happens when people earn and spend human productive time rather than speculative money.**
 
-TIME is a proposed isometric city-building and economic simulation. Every manufactured object has a verifiable history of human work; technologies can reduce the effort needed to make new objects; infrastructure can free time previously wasted on transport or repetitive tasks. A time-credit system tracks accepted contributions without mining, speculative appreciation, or interest. Crucially, **saving time doesn't automatically mint currency**.
+TIME is a proposed contemporary agent-based game: households work, shop, cook, raise children, maintain homes, study, start businesses, create art and invent technology. Goods and services have automatically audited, attributable human-effort costs; people receive transferable time credits when others accept their contributions and **spend those credits to obtain things other people made**. Time savings from progress change real lives, prices of new production and opportunities to work; they **do not automatically create currency**.
 
-The player is a steward of a living settlement, making decisions about roads, homes, food, tools, research, art, public services, and eventual AI-driven automation. The win condition isn't a giant bank balance: it is a sustainable community with reliable necessities, real discretionary time, cultural life, and fair access to resources.
+The game's first test is not a bridge or a top-line “time freed” score: **can an ordinary family obtain fish, pay a repairer, care for children, finance housing, survive illness and choose a future?** Other citizens must make their own economically meaningful decisions, not obey a central player.
 
 ## Start here
 
-- [Game Design](docs/GAME_DESIGN.md) — core experience, city-builder loop, acts, puzzles, player incentives, visible metrics, and experimental mode.
-- [Economic Simulation](docs/ECONOMIC_MODEL.md) — time definitions, cost provenance, credits, invention rewards, land/access, counterfactuals, and auditable invariants.
-- [Vertical Slice](docs/VERTICAL_SLICE.md) — first playable, the bridge scenario, interface, implementation boundaries, and acceptance criteria.
+- [Everyday-Life Economy](docs/HOUSEHOLD_ECONOMY.md) — fish purchase from fisherman to household, jobs, businesses, producer risk, family care, credit issuance and repayment, housing, retirement, AI automation and difficult scarcity cases.
+- [First Playable](docs/VERTICAL_SLICE.md) — a month in a modern neighborhood of autonomous households, with verifiable acceptance tests.
+- [Game Design](docs/GAME_DESIGN.md) — player experience, wider campaign, infrastructure dilemmas, invention, art, and society laboratory.
+- [Economic Simulation Specification](docs/ECONOMIC_MODEL.md) — core provenance and time accounting, credits, resource conservation, counterfactuals and simulation invariants.
 
-## The first level
+## How the fish transaction works
 
-A river forces villagers to spend precious time traveling around it. You decide whether to build a bridge, improve the path, or prioritize other needs. The bridge consumes productive hours and materials. If it succeeds, people spend less time walking and choose how to use their regained hours. **No coins spring out of the bridge.** The payoff is visible in people's lives.
+One fisher spends 60 minutes catching 10 fish, with 30 minutes of allocated upstream work for the batch. One fish has a certified reference cost of **9 time credits**. A household with a +120 credit balance buys two fish for 18 credits; its balance becomes +102, the seller receives 18, and two actual fish change hands. Sales across all ten fish reimburse 30 credits of upstream costs and compensate 60 credits of direct fishing work.
 
-## Important distinctions
+No credits are issued merely because someone spent time. No product must sell just because labor was spent creating it. No fish appears without production, and no scarce fish is magically allocated by a time-price formula. Those are the problems the simulated people and institutions have to solve.
 
-- **Historical creation effort** is not an item's guaranteed resale price.
-- **Reference production effort** changes when feasible technology improves; historical records do not.
-- **Avoided work** is not automatically **actual leisure gained**.
-- **A credit** is a transferable claim settled between parties, not a stored hour of someone's life.
-- **Human-time accounting** does not resolve every scarcity, quality, fairness, or cultural-value question.
+## What the simulation is supposed to discover
 
-The game should explore the strengths *and* failure modes of such an economy, not predetermine that it always wins.
+- Does reference-time pricing let working people feed and house a family?
+- Who pays for children's, caregivers', sick people's and elderly people's needs?
+- Will specialists train, and will producers risk making goods that may not sell?
+- What happens when an item is scarce even though its production labor is small?
+- When AI removes most production labor, do necessities get cheaper fast enough to make lost income irrelevant?
+- Can interest-free credit, funded commons and non-speculative rewards support housing, public services and invention?
 
-**Status:** design proposal. No gameplay implementation yet.
+**Status:** design only. The game must be capable of showing failure as well as success. It is not intended to assume that time alone provides a complete or self-evidently fair theory of value.
