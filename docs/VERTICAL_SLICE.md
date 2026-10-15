@@ -1,7 +1,7 @@
 # TIME — First Playable: A Month in a Modern Neighborhood
 ## Vertical slice v0.2 — everyday exchange first, infrastructure later
 
-**This supersedes the bridge-centered first playable.** The bridge remains an optional demonstration, but the game must first simulate households who earn, shop, cook, care for children, maintain housing, and face uncertainty. The accounting and settlement mechanics are described in [Household Economy](HOUSEHOLD_ECONOMY.md) and [Economic Model](ECONOMIC_MODEL.md).
+**This supersedes the bridge-centered first playable.** The bridge remains an optional demonstration, but the game must first simulate households who earn, shop, cook, care for children, maintain housing, and face uncertainty. The accounting and settlement mechanics are described in [Household Economy](HOUSEHOLD_ECONOMY.md), [Foundational Cost](FOUNDATIONAL_COST.md) and [Economic Model](ECONOMIC_MODEL.md).
 
 > I work, buy fish another person caught, cook a meal, pay for care, save for housing, and choose how I respond when software automation changes available work. Every person and every time-credit transfer has an explainable origin.
 
@@ -37,7 +37,7 @@ The player guides one household, can inspect or switch to other citizens, and ca
 
 ## Fish receipt and settlement
 
-**Batch:** 60 accepted fishing minutes + 30 upstream allocated minutes -> 10 fish = 90 credited minutes. Two fish cost **18 TC**. A household with +120 TC spends 18 and ends at +102. The seller receives the 18, and physically delivers two fish. Across full batch sales the fisher receives 90 gross, covers 30 of previously purchased or owed upstream inputs, and retains 60 for the direct fishing contribution.
+**Batch:** 60 accepted fishing minutes + 30 upstream allocated minutes -> 10 fish = 90 credited minutes. Two fish cost **18 TC**. **When this method is the verified feasible reference**, a household with +120 TC spends 18 and ends at +102. The seller receives the 18, and physically delivers two fish. Across full batch sales the fisher receives 90 gross, covers 30 of previously purchased or owed upstream inputs, and retains 60 for the direct fishing contribution.
 
 A co-op may pay the fisher before all fish sell using a permitted working-capital debit, then bear inventory/spoilage losses. Self-employed fishers may be paid when their catch sells. **No additional credits are created by recording embodied time or by a fish swimming into a net.** Closed-world ledger entries reconcile.
 
