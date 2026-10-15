@@ -8,6 +8,7 @@ The game's first test is not a bridge or a top-line “time freed” score: **ca
 
 ## Start here
 
+- [Foundational Cost](docs/FOUNDATIONAL_COST.md) — deterministic time-based exchange costs, distinct from discretionary access and rewards; why “agreed compensation” fails.
 - [Productivity Incentives](docs/PRODUCTIVITY_INCENTIVES.md) — why pure hourly credits can punish efficient workers, and what non-market alternatives actually reward.
 - [Everyday-Life Economy](docs/HOUSEHOLD_ECONOMY.md) — fish purchase from fisherman to household, jobs, businesses, producer risk, family care, credit issuance and repayment, housing, retirement, AI automation and difficult scarcity cases.
 - [First Playable](docs/VERTICAL_SLICE.md) — a month in a modern neighborhood of autonomous households, with verifiable acceptance tests.
@@ -16,7 +17,7 @@ The game's first test is not a bridge or a top-line “time freed” score: **ca
 
 ## How the fish transaction works
 
-One fisher spends 60 minutes catching 10 fish, with 30 minutes of allocated upstream work for the batch. One fish has a certified reference cost of **9 time credits**. A household with a +120 credit balance buys two fish for 18 credits; its balance becomes +102, the seller receives 18, and two actual fish change hands. Sales across all ten fish reimburse 30 credits of upstream costs and compensate 60 credits of direct fishing work.
+One fisher spends 60 minutes catching 10 fish, with 30 minutes of allocated upstream work for the batch. If this remains the least verified feasible method, one fish has a certified reference exchange cost of **9 time credits**. A household with a +120 credit balance buys two fish for 18 credits; its balance becomes +102, the seller receives 18, and two actual fish change hands. Sales across all ten fish reimburse 30 credits of upstream costs and compensate 60 credits of direct fishing work.
 
 No credits are issued merely because someone spent time. No product must sell just because labor was spent creating it. No fish appears without production, and no scarce fish is magically allocated by a time-price formula. Those are the problems the simulated people and institutions have to solve.
 
