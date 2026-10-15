@@ -1,9 +1,11 @@
 # TIME — Why Would Anyone Become More Productive?
-## Incentives, work obligations, voluntary effort, and the automation paradox · v0.3
+## Incentives, work obligations, voluntary effort, and the automation paradox · v0.4
 
 > **Foundational question:** If a fisherman earns one time credit per minute actually worked, why would he catch 100 fish/hour instead of 10? Neither an invariant production-cost unit nor interest-free money guarantees that individuals will seek progress.
 
 This is the most important adversarial test for TIME. **Labor spent, output produced, and reward earned are three different variables.** The simulator must *never* silently set them equal.
+
+**Price correction:** there is *no agreed compensation for a fish*. Its reference exchange cost follows a reproducible production algorithm. The examples below vary access and obligation policies, not the product's posted numerical cost. See [Foundational Cost](FOUNDATIONAL_COST.md).
 
 This document extends [Household Economy](HOUSEHOLD_ECONOMY.md) and [Economic Model](ECONOMIC_MODEL.md). It does not replace the idea that fish are paid for with credits transferred from buyers.
 
@@ -26,7 +28,7 @@ Conversely, paying 60 TC for six minutes of work without changing any other rule
 
 ## 2. A fundamental alternative: finish an accepted obligation, then be free
 
-Replace “work for eight hours to earn eight hours” with “fulfill an agreed deliverable obligation to secure your consumption entitlement.”
+Replace “work for eight hours to earn eight hours” with “complete a verifiable outcome-based contribution requirement while separately retaining constitutionally defined access to necessities.” No individually negotiated number of credits is attached to the outcome.
 
 A neighborhood needs 100 fish per day. Initially ten people each take an hour to supply ten fish. With better equipment, a single fisherman can supply 100 in an hour. The community's required fishing labor falls from 10 person-hours to one. Nine hours of obligatory fishing disappear.
 
@@ -39,7 +41,7 @@ This only works as an incentive if the fisher's access to necessities does **not
 - **Production cost:** the real, verifiable reference labor/time attributable to ten fish falls from 60 to 6 fishing minutes. Upstream fishing-related costs may also change, but are counted separately. Prices of newly produced fish reflect the new efficient production cost; the physical unit of time stays immutable.
 - **Access / claim distribution:** community members' ability to obtain fish, housing, care and other goods cannot be defined solely by current minutes of obligatory work in an increasingly automated economy. Some contributions are recognized by commitments; some essential access is collectively funded or rights-based. Any monetary transfers are explicit and financed, not conjured by merely saving time.
 
-A quota is **not** a fixed number of hours to burn. It is an agreed, quality-checked outcome. Unwanted additional fish do not qualify, and fishing must respect sustainable stock constraints.
+A quota is **not** a fixed number of hours to burn. It is a publicly specified, quality-checked outcome chosen by the community's contribution-allocation constitution—not a negotiated selling price. Unwanted additional fish do not qualify, and fishing must respect sustainable stock constraints.
 
 ## 3. What if he could catch 100, but people only want ten?
 
